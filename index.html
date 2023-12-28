@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulation de Boutique en Ligne</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="boutique">
+    <h1>Ma Boutique en Ligne</h1>
+    <div class="categories">
+      <button onclick="filtrerParCategorie('Tous')">Tous</button>
+      <button onclick="filtrerParCategorie('Vêtements')">Vêtements</button>
+      <button onclick="filtrerParCategorie('Chaussures')">Chaussures</button>
+      <button onclick="filtrerParCategorie('Accessoires de mode')">Accessoires de mode</button>
+      <button onclick="filtrerParCategorie('Produits électroniques')">Produits électroniques</button>
+      <button onclick="filtrerParCategorie('Articles ménagers')">Articles ménagers</button>
+      <button onclick="filtrerParCategorie('Produits de beauté et de soins personnels')">Produits de beauté et de soins personnels</button>
+      <button onclick="filtrerParCategorie('Produits alimentaires')">Produits alimentaires</button>
+      <button onclick="filtrerParCategorie('Livres et fournitures de bureau')">Livres et fournitures de bureau</button>
+      <!-- Ajoutez des boutons pour les autres catégories si nécessaire -->
+    </div>
+    <div id="sousCategories" class="sous-categories">
+      <!-- Les sous-catégories seront affichées ici -->
+    </div>
+    <div class="produits" id="listeProduits">
+      <!-- La liste des produits sera générée ici -->
+    </div>
+    <div class="panier">
+      <h2>Panier</h2>
+      <ul id="listePanier"></ul>
+      <p id="total">Total: $0</p>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>Ceci est un site fictif créé à des fins de démonstration. Les prix affichés sont aléatoires.</p>
+    <p>Réalisé par Samuel Mathe - Passionné de développement web</p>
+    <p>Contactez-moi : <a href="mailto:mathrsamuel@gmail.com">mathrsamuel@gmail.com</a></p>
+    <p>WhatsApp : <a href="https://wa.me/243995473604">+243995473604</a></p>
+  </footer>
+  
+  <script src="app.js"></script>
+</body>
+</html>
