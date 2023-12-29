@@ -328,6 +328,16 @@ body {
     bottom: 0;
     width: 100%;
   }
+/* Style pour le footer */
+.footer {
+  position: fixed;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
 /* Style pour les liens dans le footer */
 footer a {
   color: yellow;
