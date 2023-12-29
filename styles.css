@@ -163,4 +163,27 @@ body {
     bottom: 0;
     width: 100%;
   }
+  /* responsivite */
+  @media screen and (max-width: 600px) {
+    /* Styles pour les boutons de catégorie */
+    .categories button {
+      font-size: 12px; /* Réduire la taille de la police */
+      padding: 8px 12px; /* Ajuster le padding */
+    }
+  
+    /* Styles pour les sous-catégories */
+    .sous-categories button {
+      font-size: 10px; /* Réduire la taille de la police */
+      padding: 6px 10px; /* Ajuster le padding */
+    }
+  
+    /* Styles pour la liste de produits */
+    .produit {
+      padding: 10px; /* Ajuster le padding */
+    }
+  
+    .produit h2 {
+      font-size: 16px; /* Réduire la taille de la police */
+    }
+  }
   
