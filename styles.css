@@ -339,6 +339,17 @@ body {
     bottom: 0;
     width: 100%;
   }
+/* Style pour les liens dans le footer */
+.footer a {
+  color: yellow;
+  text-decoration: none; /* Supprime les soulignements par défaut */
+}
+
+/* Style pour les liens survolés dans le footer */
+.footer a:hover {
+  color: white; /* Change la couleur au survol */
+}
+
   /* responsivite */
   @media screen and (max-width: 600px) {
     /* Styles pour les boutons de catégorie */
