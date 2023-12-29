@@ -330,7 +330,6 @@ body {
   }
 /* Style pour le footer */
 .footer {
-  position: fixed;
   width: 100%;
   background-color: #333;
   color: #fff;
