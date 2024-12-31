@@ -1,333 +1,185 @@
-/* Style pour le corps de la page */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Style pour le conteneur principal */
-  .boutique {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Style pour le titre */
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  /* Style pour les boutons de catégorie */
-  .categories {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  
-  .categories button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .categories button:hover {
-    background-color: #e0e0e0;
-  }
-  
-  /* Style pour les sous-catégories */
-  .sous-categories {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .sous-categories button {
-    padding: 8px 16px;
-    margin: 0 5px;
-    font-size: 12px;
-    cursor: pointer;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sous-categories button:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Style pour la liste de produits */
-  .produits {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .produit {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .produit h2 {
-    margin-top: 0;
-    color: #333;
-  }
-  .produit img{
-    width: 80px;
-    height: 80px;
-  }
-  .produit p {
-    margin-bottom: 10px;
-    color: #777;
-  }
-  
-  .produit button {
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .produit button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Style pour le panier */
-  .panier {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-    margin-top: 20px;
-  }
-  
-  .panier h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .panier ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .panier p {
-    text-align: center;
-    color: #777;
-  }
-  /* style pour le panier */
-  /* Style pour la liste du panier */
-#listePanier {
-    list-style: none;
-    padding: 0;
-  }
-  
-  #listePanier li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-  }
-  
-  #listePanier li button {
-    padding: 5px 10px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #listePanier li button:hover {
-    background-color: #d32f2f;
-  }
-/* Style pour les liens dans le footer */
-.footer a {
-  color: yellow;
-  text-decoration: none; /* Supprime les soulignements par défaut */
+/* Réinitialisation des styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Style pour les liens survolés dans le footer */
-.footer a:hover {
-  color: white; /* Change la couleur au survol */
-}
 /* Style pour le corps de la page */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Style pour le conteneur principal */
-  .boutique {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Style pour le titre */
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  /* Style pour les boutons de catégorie */
-  .categories {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .categories button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .categories button:hover {
-    background-color: #e0e0e0;
-  }
-  
-  /* Style pour les sous-catégories */
-  .sous-categories {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .sous-categories button {
-    padding: 8px 16px;
-    margin: 0 5px;
-    font-size: 12px;
-    cursor: pointer;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sous-categories button:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Style pour la liste de produits */
-  .produits {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .produit {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .produit h2 {
-    margin-top: 0;
-    color: #333;
-  }
-  .produit img{
-    width: 80px;
-    height: 80px;
-  }
-  .produit p {
-    margin-bottom: 10px;
-    color: #777;
-  }
-  
-  .produit button {
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .produit button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Style pour le panier */
-  .panier {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-    margin-top: 20px;
-  }
-  
-  .panier h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .panier ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .panier p {
-    text-align: center;
-    color: #777;
-  }
-  /* style pour le panier */
-  /* Style pour la liste du panier */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style pour le conteneur principal */
+.boutique {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style pour le titre */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Style pour les boutons de catégorie */
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.categories button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.categories button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Style pour les sous-catégories */
+.sous-categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sous-categories button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sous-categories button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Style pour la liste de produits */
+.produits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+/* Style pour chaque produit */
+.produit {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.produit.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.produit h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.produit img {
+  width: 80px;
+  height: 80px;
+}
+
+.produit p {
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.produit button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.produit button:hover {
+  background-color: #45a049;
+}
+
+/* Animation d'ajout au panier */
+button.added {
+  background-color: #4CAF50;
+  color: white;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Style pour le panier */
+.panier {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.panier h2 {
+  text-align: center;
+  color: #333;
+}
+
+.panier ul {
+  list-style: none;
+  padding: 0;
+}
+
+.panier p {
+  text-align: center;
+  color: #777;
+}
+
+/* Style pour la liste du panier */
 #listePanier {
-    list-style: none;
-    padding: 0;
-  }
-  
-  #listePanier li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-  }
-  
-  #listePanier li button {
-    padding: 5px 10px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #listePanier li button:hover {
-    background-color: #d32f2f;
-  }
-  
-  
-  /* Style pour le footer */
-  .footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    bottom: 0;
-    width: 100%;
-  }
+  list-style: none;
+  padding: 0;
+}
+
+#listePanier li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+#listePanier li button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#listePanier li button:hover {
+  background-color: #d32f2f;
+}
+
 /* Style pour le footer */
 .footer {
   width: 100%;
@@ -340,28 +192,26 @@ body {
 /* Style pour les liens dans le footer */
 footer a {
   color: yellow;
-  text-decoration: none; /* Supprime les soulignements par défaut */
+  text-decoration: none;
 }
 
 /* Style pour les liens survolés dans le footer */
 footer a:hover {
-  color: white; /* Change la couleur au survol */
+  color: white;
 }
-/* Pour les appareils de moins de 750 pixels de large */
+
+/* Responsivité pour les écrans moins de 750px */
 @media screen and (max-width: 750px) {
-  /* Style pour les boutons de catégorie */
   .categories button {
     font-size: 12px;
     padding: 8px 14px;
   }
 
-  /* Style pour les sous-catégories */
   .sous-categories button {
     font-size: 10px;
     padding: 6px 12px;
   }
 
-  /* Style pour la liste de produits */
   .produits {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 10px;
@@ -389,7 +239,6 @@ footer a:hover {
     padding: 6px 12px;
   }
 
-  /* Style pour le panier */
   .panier {
     padding-top: 10px;
     margin-top: 10px;
@@ -403,7 +252,6 @@ footer a:hover {
     font-size: 0.9em;
   }
 
-  /* Style pour la liste du panier */
   #listePanier li {
     padding: 8px 0;
   }
@@ -413,35 +261,29 @@ footer a:hover {
     font-size: 10px;
   }
 
-  /* Style pour le footer */
   .footer {
     padding: 10px;
     font-size: 0.9em;
   }
 }
 
- 
-  /* responsivite */
-  @media screen and (max-width: 600px) {
-    /* Styles pour les boutons de catégorie */
-    .categories button {
-      font-size: 12px; /* Réduire la taille de la police */
-      padding: 8px 12px; /* Ajuster le padding */
-    }
-  
-    /* Styles pour les sous-catégories */
-    .sous-categories button {
-      font-size: 10px; /* Réduire la taille de la police */
-      padding: 6px 10px; /* Ajuster le padding */
-    }
-  
-    /* Styles pour la liste de produits */
-    .produit {
-      padding: 10px; /* Ajuster le padding */
-    }
-  
-    .produit h2 {
-      font-size: 16px; /* Réduire la taille de la police */
-    }
+/* Responsivité pour les écrans moins de 600px */
+@media screen and (max-width: 600px) {
+  .categories button {
+    font-size: 12px;
+    padding: 8px 12px;
   }
-  
+
+  .sous-categories button {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .produit {
+    padding: 10px;
+  }
+
+  .produit h2 {
+    font-size: 16px;
+  }
+}
