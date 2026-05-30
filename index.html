@@ -3,54 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Une boutique en ligne fictive pour explorer les produits, des vêtements aux gadgets électroniques. Réalisé par Samuel Mathe."> 
-  <title>Simulation de Boutique en Ligne</title>
+  <meta name="description" content="Vitrine e-commerce — démo catalogue JS et lien vers AutoLoc (location véhicules fullstack sur Render).">
+  <title>Boutique & AutoLoc — Samuel Mathe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <h1>Ma Boutique en Ligne</h1>
+  <a class="skip-link" href="#catalogue">Aller au catalogue</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#">Shop<span>Demo</span></a>
+      <nav class="nav" aria-label="Principale">
+        <a href="#catalogue">Catalogue</a>
+        <a href="#autoloc">AutoLoc</a>
+        <a href="https://carrentalfictif.onrender.com/" target="_blank" rel="noopener noreferrer" class="nav-cta">Démo live</a>
+      </nav>
+      <button type="button" class="cart-toggle" id="cart-toggle" aria-expanded="false" aria-controls="cart-panel">
+        Panier <span class="cart-count" id="cart-count">0</span>
+      </button>
     </div>
   </header>
 
-  <main>
-    <section class="categories">
-      <h2>Catégories</h2>
-      <button onclick="filtrerParCategorie('Tous')">Tous</button>
-      <button onclick="filtrerParCategorie('Vêtements')">Vêtements</button>
-      <button onclick="filtrerParCategorie('Chaussures')">Chaussures</button>
-      <button onclick="filtrerParCategorie('Accessoires de mode')">Accessoires de mode</button>
-      <button onclick="filtrerParCategorie('Produits électroniques')">Produits électroniques</button>
-      <button onclick="filtrerParCategorie('Articles ménagers')">Articles ménagers</button>
-      <button onclick="filtrerParCategorie('Produits de beauté et de soins personnels')">Produits de beauté et de soins personnels</button>
-      <button onclick="filtrerParCategorie('Produits alimentaires')">Produits alimentaires</button>
-      <button onclick="filtrerParCategorie('Livres et fournitures de bureau')">Livres et fournitures de bureau</button>
-    </section>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Projet front-end · démo fictive</p>
+        <h1>Catalogue moderne, filtre fluide</h1>
+        <p class="hero-lead">
+          Ancienne boutique statique retravaillée (UI/UX). Pour une application complète avec API, comptes et réservations :
+        </p>
+        <a class="btn btn-primary" href="https://carrentalfictif.onrender.com/" target="_blank" rel="noopener noreferrer">
+          Ouvrir AutoLoc sur Render
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <aside class="hero-card" id="autoloc">
+        <span class="hero-card-tag">Fullstack</span>
+        <h2>AutoLoc</h2>
+        <p>Location de véhicules — Express, SQLite/MongoDB, Stripe, admin.</p>
+        <ul>
+          <li>Catalogue API & filtres</li>
+          <li>Réservation & sessions</li>
+          <li>Déployé sur Render</li>
+        </ul>
+        <a href="https://github.com/Samuelmathe/CarRentalFictif" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Code GitHub</a>
+      </aside>
+    </div>
+  </section>
 
-    <section id="sousCategories" class="sous-categories">
-      <!-- Les sous-catégories seront affichées ici -->
-    </section>
+  <main class="wrap main-layout" id="catalogue">
+    <aside class="sidebar">
+      <div class="panel">
+        <h2>Catégories</h2>
+        <div class="category-list" id="category-list" role="tablist"></div>
+      </div>
+      <div class="panel" id="subcategory-panel" hidden>
+        <h2>Sous-catégories</h2>
+        <div class="category-list" id="subcategory-list"></div>
+      </div>
+      <div class="panel">
+        <label class="search-label" for="search">Rechercher</label>
+        <input type="search" id="search" class="search-input" placeholder="Nom du produit…" autocomplete="off">
+      </div>
+    </aside>
 
-    <section class="produits" id="listeProduits">
-      <!-- La liste des produits sera générée ici -->
-    </section>
-
-    <section class="panier">
-      <h2>Panier</h2>
-      <ul id="listePanier"></ul>
-      <p id="total">Total: $0</p>
+    <section class="catalogue">
+      <div class="catalogue-head">
+        <h2 id="catalogue-title">Tous les produits</h2>
+        <p class="catalogue-meta" id="catalogue-meta"></p>
+      </div>
+      <div class="products-grid" id="listeProduits" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>Aucun produit ne correspond à votre recherche.</p>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>Ceci est un site fictif créé à des fins de démonstration. Les prix affichés sont aléatoires.</p>
-    <p>Réalisé par Samuel Mathe - Passionné de développement web</p>
-    <p>Contactez-moi : <a href="mailto:mathrsamuel@gmail.com">mathrsamuel@gmail.com</a></p>
-    <p>WhatsApp : <a href="https://wa.me/243810626051">+243810626051</a></p>
+  <aside class="cart-panel" id="cart-panel" aria-hidden="true">
+    <div class="cart-panel-inner">
+      <header class="cart-panel-head">
+        <h2>Panier</h2>
+        <button type="button" class="cart-close" id="cart-close" aria-label="Fermer le panier">×</button>
+      </header>
+      <ul class="cart-list" id="listePanier"></ul>
+      <p class="cart-empty" id="cart-empty">Votre panier est vide.</p>
+      <footer class="cart-footer">
+        <p class="cart-total"><span>Total</span> <strong id="total">0 $</strong></p>
+        <p class="cart-note">Démo locale — pas de paiement. Voir <a href="https://carrentalfictif.onrender.com/">AutoLoc</a> pour un parcours complet.</p>
+      </footer>
+    </div>
+    <div class="cart-backdrop" id="cart-backdrop"></div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Site fictif · <a href="https://github.com/Samuelmathe/boutique-en-ligne">boutique-en-ligne</a> ·
+        <a href="https://github.com/Samuelmathe/portefolio">Portfolio</a></p>
+      <p>
+        <a href="mailto:mathrsamuel@gmail.com">mathrsamuel@gmail.com</a> ·
+        <a href="https://wa.me/243810626051">WhatsApp</a>
+      </p>
+    </div>
   </footer>
 
-  <script src="app.js" async></script>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
 </body>
 </html>
